@@ -13,8 +13,14 @@
 <?php
 
 for ($i=0; $i < 1337; $i++) {
-    echo "$i <br>";
+echo "$i <br>";
+    if ($i == 42) 
+{
+    echo "<b> <u> $i </b> </u> <br>";
+
 }
+}
+
 
 ?>
 
