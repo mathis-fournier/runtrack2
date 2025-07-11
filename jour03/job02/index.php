@@ -1,30 +1,8 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Documenta</title>
-</head>
-<body>
-    
-</body>
-
-
 <?php
-$ex = array(26, 37, 88, 1111, 3233);
+$str = "Tous ces instants seront perdus dans le temps comme les larmes sous la pluie.";
 
-for ($i=0; $i < 1337; $i++) {
-    if (in_array($i, $ex, true)) 
+for ($i = 0; $i < 77; $i+=2)
 {
-    echo "";
-
+    echo"$str[$i]";
 }
-else 
-{
-    echo "$i <br>";
-}
-}
-
 ?>
-
-</html>
