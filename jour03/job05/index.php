@@ -12,9 +12,9 @@ $str = strtolower("On n'est pas le meilleur quand on le croit mais quand on le s
 $dic = array('consonnes' => "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", 'voyelles' => "a");
 $c = 0;
 $v = 0;
-$voyelles = countVowels($str);
+$voyelles = countVoyelles($str);
 $consonnes = countConsonnes($str);
-function countVowels($str)
+function countVoyelles($str)
 {
     // Case-insensitive match for vowels
     preg_match_all("/[aeiou]/i", $str, $matches);
