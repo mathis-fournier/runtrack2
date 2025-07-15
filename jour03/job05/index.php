@@ -9,7 +9,7 @@
     
 <?php
 $str = strtolower("On n'est pas le meilleur quand on le croit mais quand on le sait.");
-$dic = array('consonnes' => "b", "c", "d", "f", "g", "h", "j", "k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "z", 'voyelles' => "a");
+
 $c = 0;
 $v = 0;
 $voyelles = countVoyelles($str);
