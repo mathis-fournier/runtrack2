@@ -1,11 +1,13 @@
 <?php
-$hauteur = 5;
-for($i=0; $i < $hauteur ;$i++){
-echo str_repeat('&nbsp;',($hauteur-$i));
-for($j = 0; $j <= $i; $j++)
-    {
-        echo "*";
-    }
-    echo "<br />";
-} 
+$str = "Certaines choses changent, et d'autres ne changeront jamais.";
+for ($i = 1; $i < strlen($str); $i++)
+{
+echo $str[$i];
+}
+
+if ($i = strlen($str))
+{
+    $c = 0;
+    echo $str[$c];
+}
 ?>
