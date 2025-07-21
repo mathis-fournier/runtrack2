@@ -22,7 +22,6 @@
 $user = $_POST["user"];
 $pwd = $_POST["pwd"];
 
-
 if ($pwd === "Rambo" & $user === "John") 
 {
 echo ("C'est pas ma guerre");
