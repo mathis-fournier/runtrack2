@@ -25,7 +25,7 @@ for ($i = 0; $i < $largeur; $i++)
 {
 echo str_repeat(' ', intval($largeur-$i));
 echo "/";
-echo str_repeat(' ', intval($i+$i));
+echo str_repeat('_', intval($i+$i));
 echo "\ <br>";
 }
 echo str_repeat("_", $largeur*2);
