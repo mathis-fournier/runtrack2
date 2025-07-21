@@ -13,16 +13,15 @@
   <input type="submit" value="Submit">
 </form>
 
-
 <?php
 $number = $_GET['nombre'];
 if ($number % 2 === 0) 
 {
-    echo("pair");
+    echo "pair";
 } 
 else 
 {
-    echo ("impair");
+    echo "impair";
 }
 ?>
 
