@@ -19,16 +19,17 @@
 $largeur = (int)$_GET['largeur'];
 $hauteur = (int)$_GET['hauteur'];
 
+if ($largeur > 0 & $hauteur > 0) {
+
 for ($i = 0; $i < $largeur; $i++)
 {
 echo str_repeat(' ', intval($largeur-$i));
 echo "/";
 echo str_repeat(' ', intval($i+$i));
-echo "\<br>";
+echo "\ <br>";
 }
 echo str_repeat("_", $largeur*2);
 echo "<br>";
-
 
 for ($i = 0; $i < $hauteur; $i++){
 echo "|";
@@ -36,6 +37,10 @@ echo str_repeat(' ', $largeur*2);
 echo "|<br>";
 }
 echo str_repeat("_", $largeur*2);
+} else {
+    
+}
+
 ?>
 </body>
 </html>
