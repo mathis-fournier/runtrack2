@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
 
+<body>
 <form action="index.php" method="GET">
   <label for="hauteur">Hauteur:</label>
   <input type="text" id="hauteur" name="hauteur"><br><br>
@@ -20,7 +20,6 @@ $largeur = (int)$_GET['largeur'];
 $hauteur = (int)$_GET['hauteur'];
 
 if ($largeur > 0 & $hauteur > 0) {
-
 for ($i = 0; $i < $largeur; $i++)
 {
 echo str_repeat(' ', intval($largeur-$i));
