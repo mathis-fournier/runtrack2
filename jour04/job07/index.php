@@ -29,6 +29,7 @@ echo "\<br>";
 echo str_repeat("_", $largeur*2);
 echo "<br>";
 
+
 for ($i = 0; $i < $hauteur; $i++){
 echo "|";
 echo str_repeat(' ', $largeur*2);
