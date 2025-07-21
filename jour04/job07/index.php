@@ -28,17 +28,19 @@ echo "/";
 echo str_repeat('_', intval($i+$i));
 echo "\ <br>";
 }
-echo str_repeat("_", $largeur*2);
-echo "<br>";
 
-for ($i = 0; $i < $hauteur; $i++){
+
+for ($i = 0; $i < $hauteur; $i++)
+{
 echo "|";
 echo str_repeat(' ', $largeur*2);
 echo "|<br>";
+if ($i === $hauteur-1) {
+    echo "|";
+    echo str_repeat("_", $largeur*2);
+    echo "|<br>";
 }
-echo str_repeat("_", $largeur*2);
-} else {
-    
+}
 }
 
 ?>
