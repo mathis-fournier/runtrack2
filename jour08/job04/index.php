@@ -40,8 +40,6 @@
     </form>
     <?php echo "Bonjour " . $cookie_value; ?>
     <?php endif ?>
-   
 
-   
 </body>
 </html>
