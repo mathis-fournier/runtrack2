@@ -1,10 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
     <?php
     $_SESSION['grille'] = [
@@ -14,13 +16,15 @@
 
     $_SESSION['scoreJ1'] = 0;
     $_SESSION['scoreJ2'] = 0;
-    $_SESSION['auJoueur'] = 1;
 
+    $_SESSION['auJoueur'] = 2;
     $j1 = 1;
     $j2 = 2;
 
     if (empty($_SESSION['grille'])) {
-        $_SESSION['grille'] = [0, 0, 0, 0, 0, 0, 0, 0, 0];
+        $_SESSION['grille'] = [0, 0, 0, 
+                               0, 0, 0, 
+                               0, 0, 0]; 
     }
 
     if (empty($_SESSION['scoreJ1'])) {
@@ -35,60 +39,31 @@
         $_SESSION['auJoueur'] = 1;
     }
 
+    if ($_GET['case'] & $_SESSION['auJoueur'] === 1) {
+        $_SESSION['auJoueur'] = 2;
+    } 
+    if ($_GET['case'] & $_SESSION['auJoueur'] === 2) {
+        $_SESSION['auJoueur'] = 1;
+    }
+
     if (!empty($_GET['case'])) {
         $leJoueurJoueLaCase = $_GET['case'] - 1;
 
         if ($_SESSION['grille'][$leJoueurJoueLaCase] == 0) {
             $_SESSION['grille'][$leJoueurJoueLaCase] = $_SESSION['auJoueur'];
         }
-        echo $leJoueurJoueLaCase;
     }
-
     ?>
-<!-- STYLE TABLEAU -->
-<style> 
-        table {
-            border-collapse: collapse;
-            margin: auto;
-            font-size: 25px;
-            font-weight: bold;
-        }
-        td {
-            width: 50px;
-            height: 50px;
-            border: 1px solid black;
-            text-align: center;
-            vertical-align: middle;
-            cursor: pointer;
-            position: relative;
-        }
-        td:hover {
-            background-color: #ccc;
-        }
-
-        td a { 
-        position: absolute; 
-        top: 0; 
-        left: 0; 
-        width: 100%; 
-        height: 100%;
-        }
-</style>
-<!--  -->
 
 
+
+<!-- GRILLE IF 1 / 2 = CROIX OU CERCLE -->
 <section class="container">
-	<p id="player">Le joueur <?php echo $_SESSION['auJoueur']; ?> doit jouer</p>
+	<p id="player">Au tour du joueur <?php echo $_SESSION['auJoueur']; ?></p>
 		<div class="tg-wrap">
 		<table class="tg">
   <tr>
-    <td class="tg-031e"><a href="?case=1#"><?php if ($_SESSION['grille'][0] == 1) {
-        echo '<img src="img/cross.png" alt="Croix">';
-    } elseif ($_SESSION['grille'][0] == 2) {
-        echo '<img src="img/circle.png" alt="Circle">';
-    } else {
-        echo ' ';
-    } ?></a></th>
+    <td class="tg-031e"><a href="?case=1#"><?php if ($_SESSION['grille'][0] == 1) { echo '<img src="img/cross.png" alt="Croix">'; } elseif ($_SESSION['grille'][0] == 2) { echo '<img src="img/circle.png" alt="Circle">'; } else { echo ' '; } ?></a></th>
     <td class="tg-031e"><a href="?case=2#"><?php if ($_SESSION['grille'][1] == 1) {
         echo '<img src="img/cross.png" alt="Croix">';
     } elseif ($_SESSION['grille'][1] == 2) {
