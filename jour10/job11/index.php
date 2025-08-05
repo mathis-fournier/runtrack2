@@ -9,18 +9,18 @@
 <?php
 $servname = "localhost"; $user = "root"; $pass = ""; $dbname = "jour09";
 $conn = new mysqli($servname, $user, $pass, $dbname);
-$sql = "SELECT * FROM SALLES ORDER BY capacite asc";
+$sql = "SELECT AVG(capacite) AS avhg FROM salles";
 $result = $conn->query($sql);
 ?>
     <table>
         <tr >
-            <th>Capacite Totale</th>
+            <th>CLC</th>
         </tr>
         <?php
         if ($result->num_rows > 0) {
             while($row = $result->fetch_assoc()) {
                 echo "<tr>";
-                echo "<td>" . $row["capacite"] . "</td>";
+                echo "<td>" . $row["avg"] . "</td>";
                 echo "</tr>";
             }
         } else {
