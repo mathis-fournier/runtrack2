@@ -9,7 +9,7 @@
 <?php
 $servname = "localhost"; $user = "root"; $pass = ""; $dbname = "jour09";
 $conn = new mysqli($servname, $user, $pass, $dbname);
-$sql = "SELECT * FROM SALLES ORDER BY capacite desc";
+$sql = "SELECT * FROM SALLES ORDER BY capacite asc";
 $result = $conn->query($sql);
 ?>
     <table>
