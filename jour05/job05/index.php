@@ -7,7 +7,7 @@
     <link href="<?php echo $_GET['style'] ?>" rel="stylesheet" >
 </head>
 <body>
-    
+
 <form action="index.php" method="get">
 <select name="style" id="style">
     <option value="styles.css">1</option>
